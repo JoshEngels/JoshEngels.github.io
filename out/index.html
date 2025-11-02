@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Josh Engels - PhD student at MIT working on neural network interpretability and AI safety.">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <title>Josh Engels </title>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NN7RTLBRKY"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-NN7RTLBRKY');
+</script>
+
+<body>
+    
+<header>
+    <nav>
+        <div class="site-name heading-font">Josh Engels &mdash; home page</div>
+    </nav>
+</header>
+
+    <div class="container">
+        <div class="column left">
+            <div class="sticky-div">
+                
+            </div>
+        </div>
+        <div class="column main">
+            <div class="collapsed-sidebar">
+                
+            </div>
+            <div class="content">
+                
+<h1 class="post-title">Josh Engels</h1>
+
+<div style="text-align: center; margin: 2rem 0;">
+    <img src="img/bio.jpg" alt="Josh Engels" style="max-width: 300px; border-radius: 10px;">
+</div>
+
+<h2 id="section-1">About</h2>
+
+<p>I am currently a research scientist at Google DeepMind, where I work on the <a href="https://www.lesswrong.com/posts/C5KAZQib3bzzpeyrg/full-post-progress-update-1-from-the-gdm-mech-interp-team">language model interpretability team.</a> I am primarily motivated by reducing catastrophic risks from future powerful AI systems, and I believe that this is likely the most important problem in the world. I am also on leave from my PhD at MIT, where I worked with <a href="https://tegmark.org/">Max Tegmark</a> on mechanistic interpretability and AI safety. </p>
+
+<h2 id="section-2">Links</h2>
+
+<p>
+    <a href="https://scholar.google.com/citations?user=yVPnVK8AAAAJ&hl=en">google scholar</a> //
+    <a href="https://github.com/JoshEngels">github</a> //
+    <a href="https://twitter.com/JoshAEngels">twitter</a> //
+    <a href="mailto:josh.adam.engels@gmail.com">email</a>
+</p>
+
+
+
+<h2 id="section-2">Pages</h2>
+> <a href="papers/index.html">Selected Papers and Projects</a>
+> <a href="hiking/index.html">Hiking Photos</a>
+
+<h2 id="section-3">Posts</h2>
+
+<p class="link-heading">2025</p>
+<ul>
+    
+    
+    
+    
+    
+</ul>
+
+
+
+            </div>
+        </div>
+        <!--<div class="column right">
+            <div class="sticky-div">
+                
+            </div>
+        </div>-->
+    </div>
+    <footer></footer>
+
+    <!-- Footnote tooltip script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Create a single tooltip element
+            const tooltip = document.createElement('div');
+            tooltip.className = 'footnote-tooltip';
+            document.body.appendChild(tooltip);
+            let hideTimer;
+
+            function positionTooltip(ref) {
+                const rect = ref.getBoundingClientRect();
+                const scrollX = window.scrollX || window.pageXOffset;
+                const scrollY = window.scrollY || window.pageYOffset;
+                // Initial placement below the reference
+                let top = scrollY + rect.bottom + 8;
+                let left = scrollX + rect.left;
+                tooltip.style.top = top + 'px';
+                tooltip.style.left = left + 'px';
+                // Adjust if it overflows the right edge
+                const tt = tooltip.getBoundingClientRect();
+                const viewportWidth = document.documentElement.clientWidth;
+                if (tt.right > viewportWidth - 8) {
+                    const overflow = tt.right - (viewportWidth - 8);
+                    tooltip.style.left = (left - overflow) + 'px';
+                }
+                // Adjust if it overflows the left edge
+                if (tt.left < 8) {
+                    tooltip.style.left = (scrollX + 8) + 'px';
+                }
+            }
+
+            function showTooltip(ref) {
+                clearTimeout(hideTimer);
+                tooltip.innerHTML = ref.getAttribute('data-footnote');
+                tooltip.style.display = 'block';
+                positionTooltip(ref);
+            }
+
+            function hideTooltip() {
+                hideTimer = setTimeout(() => {
+                    tooltip.style.display = 'none';
+                }, 300); // 300ms delay before hiding
+            }
+
+            // Attach events to each footnote reference
+            document.querySelectorAll('a.footnote-ref').forEach(function (ref) {
+                ref.addEventListener('mouseenter', () => showTooltip(ref));
+                ref.addEventListener('mouseleave', hideTooltip);
+            });
+
+            // Keep tooltip open when hovering over it
+            tooltip.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+            tooltip.addEventListener('mouseleave', hideTooltip);
+        });
+    </script>
+</body>
+
+</html>

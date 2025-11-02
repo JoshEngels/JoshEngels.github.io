@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Josh Engels {% endblock %}
+
+{% block header %}
+<header>
+    <nav>
+        <div class="site-name heading-font">Josh Engels &mdash; home page</div>
+    </nav>
+</header>
+{% endblock %}
+
+{% set toc = false %}
+
+{% block content %}
+<h1 class="post-title">Josh Engels</h1>
+
+<div style="text-align: center; margin: 2rem 0;">
+    <img src="img/bio.jpg" alt="Josh Engels" style="max-width: 300px; border-radius: 10px;">
+</div>
+
+<h2 id="section-1">About</h2>
+
+<p>I am currently a research scientist at Google DeepMind, where I work on the <a href="https://www.lesswrong.com/posts/C5KAZQib3bzzpeyrg/full-post-progress-update-1-from-the-gdm-mech-interp-team">language model interpretability team.</a> I am primarily motivated by reducing catastrophic risks from future powerful AI systems, and I believe that this is likely the most important problem in the world. I am also on leave from my PhD at MIT, where I worked with <a href="https://tegmark.org/">Max Tegmark</a> on mechanistic interpretability and AI safety. </p>
+
+<h2 id="section-2">Links</h2>
+
+<p>
+    <a href="https://scholar.google.com/citations?user=yVPnVK8AAAAJ&hl=en">google scholar</a> //
+    <a href="https://github.com/JoshEngels">github</a> //
+    <a href="https://twitter.com/JoshAEngels">twitter</a> //
+    <a href="mailto:josh.adam.engels@gmail.com">email</a>
+</p>
+
+
+
+<h2 id="section-2">Pages</h2>
+> <a href="papers/index.html">Selected Papers and Projects</a>
+> <a href="hiking/index.html">Hiking Photos</a>
+
+<h2 id="section-3">Posts</h2>
+{% for year_group in posts_by_year %}
+<p class="link-heading">{{ year_group.year }}</p>
+<ul>
+    {% for post in year_group.posts %}
+    {% if post.meta.label not in ['papers', 'hiking'] %}
+    <li><a href="{{ post.meta.label }}/index.html">{{ post.meta.title }}</a></li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endfor %}
+
+{% endblock %}

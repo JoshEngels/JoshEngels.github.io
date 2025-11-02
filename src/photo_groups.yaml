@@ -1,0 +1,20 @@
+# Photo group names mapping
+# Format: "YYYY-MM-DD": "Group Name"
+# Run: python print_timestamps.py to see all timestamps
+# Example:
+# "2025-06-12": "Mount Washington - June 2025"
+# "2025-10-24": "White Mountains Day Hike"
+
+"2025-10-24": "A 3 Day Jaunt to the Dolomites"
+"2025-10-10": "My First UK Backpacking Trip: The Lake District"
+"2025-08-03": "Family Trip to Switzerland"
+"2025-06-12": "Month Long Colorado and Utah Road + Backpacking Trip"
+"2025-04-17": "Two Weeks in Vietnam"
+"2024-11-04": "Joshua Tree"
+"2024-07-16": "Julian Alps"
+"2023-08-05": "Aborted Wind River High Route"
+"2023-06-17": "First Time in the Dolomites"
+"2023-06-09": "Corsica (Sadly Aborted)"
+"2023-05-25": "God I Love Scotland"
+"2022-07-31": "One Month Solo on The PCT"
+"2019-12-26": "A Fitting Start: New Zealand"
