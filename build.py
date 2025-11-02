@@ -402,6 +402,15 @@ def copy_css(templates_dir: str = "templates", out_dir: str = "out"):
     with open(f"{out_dir}/css/style.css", "w") as f:
         f.write(css)
 
+def copy_images_2(src_dir: str = "src", out_dir: str = "out"):
+    """Copy images directory to the output directory."""
+    src_images_dir = os.path.join(src_dir, "images")
+    dst_images_dir = os.path.join(out_dir, "images")
+    if os.path.exists(src_images_dir):
+        shutil.copytree(src_images_dir, dst_images_dir)
+    else:
+        print(f"Warning: Images directory not found: {src_images_dir}")
+
 
 def copy_favicons(src_dir: str = "src", out_dir: str = "out"):
     """Copy favicons directory to the output directory."""
@@ -563,6 +572,7 @@ def main():
     generate_html(posts)
     copy_css()
     copy_favicons()
+    copy_images_2()
     generate_external_link_redirects()
 
 
