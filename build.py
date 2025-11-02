@@ -407,7 +407,7 @@ def copy_images_2(src_dir: str = "src", out_dir: str = "out"):
     src_images_dir = os.path.join(src_dir, "images")
     dst_images_dir = os.path.join(out_dir, "images")
     if os.path.exists(src_images_dir):
-        shutil.copytree(src_images_dir, dst_images_dir)
+        shutil.copytree(src_images_dir, dst_images_dir, dirs_exist_ok=True)
     else:
         print(f"Warning: Images directory not found: {src_images_dir}")
 
