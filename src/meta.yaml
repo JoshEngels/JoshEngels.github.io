@@ -1,13 +1,13 @@
 - label: papers
   title: "Papers and Projects"
-  date: 2025-01-01
-  description: "Publications on mechanistic interpretability, sparse autoencoders, and approximate nearest neighbor search."
+  date: 2025-11-02
+  description: "Publications on mechanistic interpretability and AI Safety."
   math: false
   tags: ["research", "papers"]
 
 - label: hiking
   title: "Hiking Photos"
-  date: 2025-01-02
+  date: 2025-11-02
   description: "A collection of photos from various hiking adventures."
   math: false
   tags: ["photos", "hiking"]
