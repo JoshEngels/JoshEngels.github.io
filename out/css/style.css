@@ -156,7 +156,7 @@ header nav ul li {
 
 a,
 a:active {
-    color: var(--theme-color);
+    color: #0000EE;
     text-decoration: none;
 }
 a:hover {
