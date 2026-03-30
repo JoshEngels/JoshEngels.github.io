@@ -567,12 +567,20 @@ def process_hiking_photos(photos_dir: str = "src/hiking_photos",
     return group_data
 
 
+def copy_chess(src_dir: str = "src", out_dir: str = "out"):
+    src_chess_dir = os.path.join(src_dir, "chess")
+    dst_chess_dir = os.path.join(out_dir, "chess")
+    if os.path.exists(src_chess_dir):
+        shutil.copytree(src_chess_dir, dst_chess_dir, dirs_exist_ok=True)
+
+
 def main():
     posts = load_posts()
     generate_html(posts)
     copy_css()
     copy_favicons()
     copy_images_2()
+    copy_chess()
     generate_external_link_redirects()
 
 
