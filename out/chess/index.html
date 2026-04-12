@@ -916,9 +916,7 @@ function buildMovesDetail(puzzle) {
     if (!inList) {
       html += '<div class="move-detail-row best-move">';
       html += '<div class="move-detail-name">' + puzzle.best_move + '</div>';
-      html += '<div class="move-detail-eval positive"><span class="best-label">Stockfish best</span></div>';
-      html += '<div class="move-detail-bar-wrap"><div class="move-detail-bar good" style="width:0%"></div></div>';
-      html += '<div class="move-detail-count">0x</div>';
+      html += '<div class="move-detail-eval positive" style="flex:1;text-align:left;"><span class="best-label">Stockfish best</span></div>';
       html += '</div>';
     }
   }
@@ -1211,7 +1209,8 @@ function renderMiniBoard(fen, flipped) {
 function buildSplash() {
   const grid = document.getElementById('splashGrid');
   grid.innerHTML = '';
-  for (let i = 0; i < TOTAL; i++) {
+  for (let k = 0; k < TOTAL; k++) {
+    const i = order[k];
     const p = puzzles[i];
     const card = document.createElement('div');
     card.className = 'splash-card';
@@ -1267,6 +1266,7 @@ function toggleShuffle() {
     btn.classList.remove('active');
   }
   orderPos = 0;
+  buildSplash();
 }
 
 function showSplash() {
