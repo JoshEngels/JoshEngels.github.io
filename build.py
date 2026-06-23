@@ -473,25 +473,26 @@ def generate_talk_pages(src_dir: str = "src", out_dir: str = "out"):
             print(f"Warning: Talk PDF not found: {src_path}")
             continue
 
+        # Serve the PDF at the root, e.g. /developing-areas.pdf
+        shutil.copy2(src_path, os.path.join(out_dir, filename))
+
+        # Keep /<slug> redirecting to the PDF so the clean (old) link still works
         talk_dir = os.path.join(out_dir, slug)
         os.makedirs(talk_dir, exist_ok=True)
 
-        # Copy the PDF alongside the redirect page
-        shutil.copy2(src_path, os.path.join(talk_dir, filename))
-
-        # Redirect /<slug> to the PDF in the same directory
+        target = f"/{filename}"
         redirect_html = f"""<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url={filename}">
-    <link rel="canonical" href="{filename}">
-    <script>window.location.href = "{filename}";</script>
+    <meta http-equiv="refresh" content="0; url={target}">
+    <link rel="canonical" href="{target}">
+    <script>window.location.href = "{target}";</script>
 </head>
 <body>
-    <p>Redirecting to <a href="{filename}">the PDF</a>...</p>
-    <p>If you are not redirected automatically, <a href="{filename}">click here</a>.</p>
+    <p>Redirecting to <a href="{target}">the PDF</a>...</p>
+    <p>If you are not redirected automatically, <a href="{target}">click here</a>.</p>
 </body>
 </html>"""
 
