@@ -88,6 +88,7 @@ class PostMeta:
         None  # a list of links to other places where this post has been published
     )
     word_count: int | None = None  # Word count of the post content
+    hide_meta: bool = False  # whether to hide the date/word-count meta line
 
 
 @dataclass

@@ -3,6 +3,7 @@
   date: 2025-11-02
   description: "Publications on mechanistic interpretability and AI Safety."
   math: false
+  hide_meta: true
   tags: ["research", "papers"]
 
 - label: hiking
@@ -10,4 +11,5 @@
   date: 2025-11-02
   description: "A collection of photos from various hiking adventures."
   math: false
+  hide_meta: true
   tags: ["photos", "hiking"]

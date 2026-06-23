@@ -33,6 +33,7 @@
 {% block content %}
 <article>
     <h2 class="post-title">{{ post.meta.title }}</h2>
+    {% if not post.meta.hide_meta %}
     <div class="post-meta">
         {% if post.meta.coauthors %}
         <p>Co-authored with: <strong>{{ post.meta.coauthors | join(', ') }}</strong></p>
@@ -44,6 +45,7 @@
                 round | int }} minute read </p>
                 <!-- <p class="post-summary"> <strong>Summary</strong>: {{ post.meta.description }}</p> -->
     </div>
+    {% endif %}
 
     {% if toc %}
     <div class="collapsed-sidebar">
