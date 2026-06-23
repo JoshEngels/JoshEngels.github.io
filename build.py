@@ -30,6 +30,14 @@ EXTERNAL_LINKS = {
     "email": "mailto:josh.adam.engels@gmail.com",
 }
 
+# Talks configuration: slug -> PDF filename in src/talks.
+# Each entry is served at /<slug> with a redirect to the hosted PDF.
+TALKS = {
+    "developing-areas": "developing-areas.pdf",
+    "sae-progress-limitations": "sae-progress-limitations.pdf",
+    "not-all-linear": "not-all-linear.pdf",
+}
+
 
 class FootnoteDataAttributeExtension(Extension):
     def extendMarkdown(self, md):
@@ -455,6 +463,42 @@ def generate_external_link_redirects(out_dir: str = "out"):
 
 
 
+def generate_talk_pages(src_dir: str = "src", out_dir: str = "out"):
+    """Copy talk PDFs and generate clean-URL redirect pages for each talk."""
+    talks_src_dir = os.path.join(src_dir, "talks")
+
+    for slug, filename in TALKS.items():
+        src_path = os.path.join(talks_src_dir, filename)
+        if not os.path.exists(src_path):
+            print(f"Warning: Talk PDF not found: {src_path}")
+            continue
+
+        talk_dir = os.path.join(out_dir, slug)
+        os.makedirs(talk_dir, exist_ok=True)
+
+        # Copy the PDF alongside the redirect page
+        shutil.copy2(src_path, os.path.join(talk_dir, filename))
+
+        # Redirect /<slug> to the PDF in the same directory
+        redirect_html = f"""<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; url={filename}">
+    <link rel="canonical" href="{filename}">
+    <script>window.location.href = "{filename}";</script>
+</head>
+<body>
+    <p>Redirecting to <a href="{filename}">the PDF</a>...</p>
+    <p>If you are not redirected automatically, <a href="{filename}">click here</a>.</p>
+</body>
+</html>"""
+
+        with open(os.path.join(talk_dir, "index.html"), "w", encoding="utf-8") as f:
+            f.write(redirect_html)
+
+
 def get_photo_timestamp(photo_path: str) -> datetime:
     """Extract timestamp from photo EXIF data."""
     try:
@@ -582,6 +626,7 @@ def main():
     copy_images_2()
     copy_chess()
     generate_external_link_redirects()
+    generate_talk_pages()
 
 
 def get_post_title(label: str, posts: list[Post]) -> str:

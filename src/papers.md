@@ -72,6 +72,14 @@ ICLR 2025.
 
 \* indicates equal contribution
 
+## Talks
+
+[Developing Areas of Alignment Science](https://joshengels.com/developing-areas) — June 23, 2026
+
+[SAEs: Progress and Limitations](https://joshengels.com/sae-progress-limitations) — March 2025
+
+[Not All Language Model Features Are Linear](https://joshengels.com/not-all-linear) — December 2024
+
 ## Other Projects and Writing
 
 [LLM-Driven Feature Discovery](https://www.lesswrong.com/posts/WAZWA6FPQvH8okouJ/llm-driven-feature-discovery) — June 2026
