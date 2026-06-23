@@ -74,7 +74,7 @@ ICLR 2025.
 
 ## Talks
 
-[Developing Areas of Alignment Science](https://joshengels.com/developing-areas) — June 23, 2026
+[Developing Areas of Alignment Science](https://joshengels.com/developing-areas) — June 2026
 
 [SAEs: Progress and Limitations](https://joshengels.com/sae-progress-limitations) — March 2025
 
