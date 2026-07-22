@@ -200,6 +200,41 @@ def add_br_before_footnotes(html_content):
     return str(soup)
 
 
+def format_paper_entries(html_content):
+    """Structure paper entries on the papers page.
+
+    Each paper is a <p> whose source lines are title/authors/venue/links.
+    Split them onto their own lines and tag the venue line so it can be styled.
+    """
+    soup = BeautifulSoup(html_content, "html.parser")
+
+    for p in soup.find_all("p"):
+        first_tag = next((c for c in p.children if getattr(c, "name", None)), None)
+        if first_tag is None or first_tag.name != "strong":
+            continue
+        lines = [line.strip() for line in p.decode_contents().split("\n")]
+        if len(lines) < 4:
+            continue
+        title, authors, venue = lines[0], lines[1], lines[2]
+        links = " ".join(lines[3:])
+        p.name = "div"
+        p["class"] = p.get("class", []) + ["paper-entry"]
+        new_inner = BeautifulSoup(
+            f'<span class="paper-header">'
+            f'<span class="paper-title">{title}</span>'
+            f'<span class="paper-meta">{venue}</span>'
+            f'</span>'
+            f'<span class="paper-authors">{authors}</span>'
+            f'<span class="paper-links">{links}</span>',
+            "html.parser",
+        )
+        p.clear()
+        for child in list(new_inner.contents):
+            p.append(child)
+
+    return str(soup)
+
+
 def format_date_with_ordinal(date_obj):
     """Format date with ordinal suffix (1st, 2nd, 3rd, etc.)"""
     day = date_obj.day
@@ -356,6 +391,9 @@ def prepare_post_content(post: Post, md: markdown.Markdown):
 
     # Add <br> before footnotes
     post_content_html = add_br_before_footnotes(post_content_html)
+
+    if post.meta.label == "papers":
+        post_content_html = format_paper_entries(post_content_html)
 
     # Calculate word count
     word_count = len(post.content.split())

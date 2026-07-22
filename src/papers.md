@@ -2,27 +2,27 @@
 
 **How Transparent is DiffusionGemma?**
 <u>Joshua Engels</u>, Callum McDougall, Bilal Chughtai, ..., Rohin Shah, and Neel Nanda.
-arXiv preprint, 2026.
+arXiv, 2026.
 [Paper](https://arxiv.org/abs/2606.20560) | [Blog](https://www.lesswrong.com/posts/zoYXpdaMgFT43Wc24/how-transparent-is-diffusiongemma-and-why-it-matters) | [Twitter](https://x.com/JoshAEngels/status/2068034390245154877)
 
 **Building Production-Ready Probes for Gemini.**
 Janos Kramar, <u>Joshua Engels</u>, Zhengxuan Wang, Bilal Chughtai, Rohin Shah, Neel Nanda, and Arthur Conmy.
-arXiv preprint, 2026.
+arXiv, 2026.
 [Paper](https://arxiv.org/abs/2601.11516) | [Twitter](https://x.com/ArthurConmy/status/2013285602070770036)
 
 **Training on Documents About Monitoring Leads to CoT Obfuscation.**
 Reilly Haskins, Bilal Chughtai, and <u>Joshua Engels</u>.
-arXiv preprint, 2026.
+arXiv, 2026.
 [Paper](https://arxiv.org/abs/2605.15257) | [Blog](https://www.lesswrong.com/posts/vmR9BZmyeFZCihbyx/paper-training-on-documents-about-monitoring-leads-to-cot) | [Twitter](https://x.com/ReillyHaskins02/status/2059620403606323520)
 
-**When Reading the Chain of Thought Falls Short: A Testbed for Reasoning Trace Analysis.**
+**When Reading the Chain of Thought Falls Short:<br>A Testbed for Reasoning Trace Analysis.**
 Daria Ivanova, Riya Tyagi, <u>Joshua Engels</u>, and Neel Nanda.
-Mechanistic Interpretability Workshop at ICML 2026.
+MI Workshop @ ICML 2026.
 [Paper](https://openreview.net/forum?id=8XgRKwdLi7) | [Blog](https://www.lesswrong.com/posts/tDJWZLQNN7poqCwKa/test-your-best-methods-on-our-hard-cot-interp-tasks)
 
 **Designing Effective Monitor-Based Interventions for Mitigating Reward Hacking During RL.**
 Aria Wong, <u>Joshua Engels</u>, and Neel Nanda.
-Mechanistic Interpretability Workshop at ICML 2026.
+MI Workshop @ ICML 2026.
 [Paper](https://openreview.net/forum?id=uFTnN6fUgW) | [Blog](https://www.lesswrong.com/posts/R5MdWGKsuvdPwGFBG/steering-rl-training-benchmarking-interventions-against)
 
 **Scaling Laws For Scalable Oversight.**
@@ -40,9 +40,9 @@ Mathew Chen\*, <u>Joshua Engels</u>\*, and Max Tegmark.
 ICML 2025.
 [Paper](https://arxiv.org/abs/2501.19406) | [Code](https://github.com/matchten/LoRA-Models-for-SAEs) | [Twitter](https://x.com/JoshAEngels/status/1886499793406771619)
 
-**Simple Mechanistic Explanations for Out-Of-Context Reasoning.**
+**Simple Mechanistic Explanations for<br>Out-Of-Context Reasoning.**
 Atticus Wang\*, <u>Joshua Engels</u>\*, Oliver Clive-Griffin\*, Senthooran Rajamanoharan, and Neel Nanda.
-ICML 2025 Workshop on Reliable and Responsible Foundation Models.
+R2-FM Workshop @ ICML 2025.
 [Paper](https://arxiv.org/abs/2507.08218)
 
 **Dense SAE Latents Are Features, Not Bugs.**
@@ -111,3 +111,20 @@ ICLR 2025.
 [Spreadsheet of 50 Weird LLM Phenomenon](https://docs.google.com/spreadsheets/d/1yFAawnO9z0DtnRJDhRzDqJRNkCsIK_N3_pr_yCUGouI/edit?gid=0#gid=0) — May 2025
 
 [TinySAE: A Minimal SAE Implementation](https://github.com/JoshEngels/TinySAE) — March 2025
+
+## Algorithms Papers (pre 2025)
+
+**Approximate Nearest Neighbor Search with Window Filters.**
+<u>Joshua Engels</u>, Benjamin Landrum, Shangdi Yu, Laxman Dhulipala, and Julian Shun.
+ICML 2024.
+[Paper](https://arxiv.org/abs/2402.00943) | [Code](https://github.com/JoshEngels/RangeFilteredANN)
+
+**DESSERT: An Efficient Algorithm for Vector Set Search with<br>Vector Set Queries.**
+<u>Joshua Engels</u>, Benjamin Coleman, Vihan Lakshman, and Anshumali Shrivastava.
+Neurips 2023.
+[Paper](https://arxiv.org/abs/2210.15748) | [Code](https://github.com/ThirdAIResearch/Dessert)
+
+**Practical Near Neighbor Search via Group Testing.**
+<u>Joshua Engels</u>, Benjamin Coleman, and Anshumali Shrivastava.
+Neurips 2021 (Spotlight).
+[Paper](https://arxiv.org/abs/2106.11565) | [Code](https://github.com/JoshEngels/FLINNG)

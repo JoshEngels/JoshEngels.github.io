@@ -257,6 +257,45 @@ h3 { font-size: 1rem; }
 }
 
 
+/* Paper entries on the papers page */
+.paper-entry {
+    margin-bottom: var(--gap-md);
+    line-height: 1.45;
+}
+
+.paper-entry + .paper-entry {
+    border-top: 1px solid #e0e0e0;
+    padding-top: var(--gap-md);
+}
+
+.paper-entry .paper-authors,
+.paper-entry .paper-links {
+    display: block;
+}
+
+.paper-entry .paper-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0 var(--gap-md);
+}
+
+.paper-entry .paper-title {
+    flex: 1 1 0;
+    min-width: 55%;
+}
+
+.paper-entry .paper-meta {
+    margin-left: auto;
+    text-align: right;
+    white-space: nowrap;
+    font-family: var(--sans-serif-font);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
 .post-summary {
     text-align: left;
     margin: var(--gap-lg) 0;
