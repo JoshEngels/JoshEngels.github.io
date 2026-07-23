@@ -33,6 +33,7 @@ EXTERNAL_LINKS = {
 # Talks configuration: slug -> PDF filename in src/talks.
 # Each entry is served at /<slug> with a redirect to the hosted PDF.
 TALKS = {
+    "pragmatic-vision": "pragmatic-vision.pdf",
     "developing-areas": "developing-areas.pdf",
     "sae-progress-limitations": "sae-progress-limitations.pdf",
     "not-all-linear": "not-all-linear.pdf",

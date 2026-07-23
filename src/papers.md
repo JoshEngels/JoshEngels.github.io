@@ -76,6 +76,8 @@ ICLR 2025.
 
 [Developing Areas of Alignment Science](https://joshengels.com/developing-areas) — June 2026
 
+[A Pragmatic Vision for Interpretability](https://joshengels.com/pragmatic-vision) — December 2025
+
 [SAEs: Progress and Limitations](https://joshengels.com/sae-progress-limitations) — March 2025
 
 [Not All Language Model Features Are Linear](https://joshengels.com/not-all-linear) — December 2024
